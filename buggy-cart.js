@@ -1,4 +1,7 @@
 const cart = [
+    // RISKY: price "1500" is a string, not a number. It works here because * turns
+    // it into a number ("1500" * 2 = 3000). It would break with +, which joins text:
+    // "1500" + 2 gives "15002".
     { name: "Notebook", price: "1500", qty: 2 },
     { name: "Pen", price: 300, qty: 5 },
     { name: "Bag", price: 12000, qty: 1 },
