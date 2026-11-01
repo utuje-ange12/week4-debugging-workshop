@@ -2,33 +2,32 @@
 
 ## Snippet 1: Greeting
 - **Error type:** ReferenceError
-- **What it means (my own words):** (explain in one sentence why `studentname` doesn't exist)
-- **Fix:** (the corrected console.log line)
+- **What it means:** JavaScript is case-sensitive. The variable is `studentName` but the code uses `studentname`, which does not exist.
+- **Fix:** `console.log("Welcome, " + studentName)`
 
 ## Snippet 2: Shouting
 - **Error type:** TypeError
-- **What it means (my own words):** (explain why `toUppercase` can't be called)
+- **What it means:** Strings have no method called `toUppercase`. The real method is `toUpperCase` with a capital C.
 - **Fix:** `console.log(city.toUpperCase())`
-- # Exercise 1: Six Broken Snippets
 
 ## Snippet 3: Page title
 - **Error type:** TypeError
-- **What it means (my own words):** (what did querySelector return, and why can't you set .textContent on it?)
+- **What it means:** The selector `#page-titel` is misspelled, so `querySelector` returned `null`. Setting `.textContent` on `null` crashes.
 - **Fix:** `const title = document.querySelector("#page-title")`
 
 ## Snippet 4: Score counter
 - **Error type:** TypeError
-- **What it means (my own words):** (what does const promise, and which line breaks it?)
+- **What it means:** `score` was declared with `const`, which cannot be reassigned, but line 2 changes it.
 - **Fix:** `let score = 0`
 
 ## Snippet 5: Shopping list
 - **Error type:** SyntaxError
-- **What it means (my own words):** (why did the browser fail before running anything?)
+- **What it means:** A comma is missing between `"avocado"` and `"banana"`. The browser could not parse the script, so none of it ran.
 - **Fix:** `const fruits = ["mango", "avocado", "banana"]`
 
 ## Snippet 6: Countdown
 - **Error type:** RangeError
-- **What it means (my own words):** (what did the endless negative numbers show?)
+- **What it means:** `countdown` calls itself forever with no stopping condition. The Console showed endless negative numbers until the call stack filled up.
 - **Fix:**
   ```js
   function countdown(n) {
@@ -36,4 +35,4 @@
     console.log(n)
     countdown(n - 1)
   }
-  ``` 
+  ```
