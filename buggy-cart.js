@@ -20,7 +20,7 @@ function getDiscount(subtotal) {
 function getTotal(items) {
     const subtotal = getSubtotal(items)
     const discount = getDiscount(subtotal)
-    const total = subtotal - discount
+    const total = subtotal - subtotal * discount
     return total
 }
 console.log(getTotal(cart))
