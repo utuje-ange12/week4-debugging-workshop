@@ -13,8 +13,8 @@ function getSubtotal(items) {
     return subtotal
 }
 function getDiscount(subtotal) {
-    if (subtotal > 10000) return 0.1
-    else if (subtotal > 20000) return 0.2
+    if (subtotal > 20000) return 0.2
+    else if (subtotal > 10000) return 0.1
     return 0
 }
 function getTotal(items) {
