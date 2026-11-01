@@ -20,6 +20,8 @@ function getDiscount(subtotal) {
 function getTotal(items) {
     const subtotal = getSubtotal(items)
     const discount = getDiscount(subtotal)
+    // BUG 3: discount is a rate (0.1 = 10%), not an amount of money.
+// I found it with a breakpoint here and the Scope panel showing discount: 0.1.
     const total = subtotal - subtotal * discount
     return total
 }
